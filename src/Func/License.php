@@ -22,17 +22,17 @@ class License extends SerialManager
 
     public function disable()
     {
-
+        //Coming soon
     }
 
     public function enable()
     {
-
+        //Coming soon
     }
 
     public function renew($date)
     {
-        
+        //Coming soon
     }
 
     public function check()
