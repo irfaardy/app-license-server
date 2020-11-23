@@ -1,0 +1,24 @@
+{
+    "name": "irfa/app-license-server",
+    "description": "\"License/Serial for web apllication\"",
+    "type": "package",
+    "license": "MIT",
+    "version": "v1.0",
+    "keywords": ["laravel", "security", "serial", "decrypt", "secure","upload file"],
+    "authors": [
+        {
+            "name": "Irfa A",
+            "email": "irfa.backend@protonmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "ext-json": "*",
+        "laravel/framework": "^6.0|^7.0"
+    },
+    "autoload": {
+            "psr-4": {
+                "Irfa\\AppLicenseServer\\": "src/"
+            }
+    }
+}
