@@ -7,7 +7,7 @@ namespace Irfa\AppLicenseServer\Core;
 use Illuminate\Support\Str;
 use Irfa\AppLicenseServer\Models\LicenseSerial;
 
-class SerialManager
+class SerialManager extends SerialGenerator
 {
     private $generated_serial;
     private $name;
@@ -18,16 +18,6 @@ class SerialManager
     private $expired;
     private $status;
 
-    private function generateSerial()
-    {
-        $sn = null;
-        for($i=1;$i<=config('irfa.app_license_server.segment');$i++)
-        {
-            $sn .= Str::random(config('irfa.app_license_server.length'))."-";
-        }
-        $sn = strtoupper($sn);
-        return rtrim($sn, '-');
-    }
 
     protected function expired($sn)
     {
@@ -79,10 +69,33 @@ class SerialManager
         {
             return true;
         } 
-            return true;
+            return false;
     }
     private function insertToTable()
     {
         return LicenseSerial::create(['name'=>$this->name,'domain'=>$this->domain,'phone_number'=>$this->phone_number,'address'=>$this->address,'serial'=>$this->serial,'expired'=>$this->expired]);
+    }
+
+    protected function disableSN($sn)
+    {
+         return LicenseSerial::where('serial',$sn)->update(['status'=>1]);
+    }
+
+    protected function renewSN($sn,$days)
+    {
+        if($this->exists($sn))
+        {
+            $days = strtotime($days);
+            $sn = LicenseSerial::where('serial',$sn);
+            $sn->update(['expired' =>  $days]);
+
+            $return = $sn->first();
+            $return['message'] = "Renew serial number succesfully";
+            $return['expired'] = date("Y-m-d, H:m:s",$days);
+            return $return;
+
+        }
+        $return['message'] = "Renew serial number Failed because serial number not exists.";
+         return $return;
     }
 }

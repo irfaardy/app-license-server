@@ -21,6 +21,7 @@ class CreateLicenseSerials extends Migration
             $table->text('address')->nullable();
             $table->string('serial',120)->unique();
             $table->string('expired',16);
+            $table->boolean('logging')->default(0);
             $table->boolean('status')->default(0);
             $table->timestamps();
         });

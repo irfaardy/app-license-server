@@ -22,7 +22,7 @@ class License extends SerialManager
 
     public function disable()
     {
-        //Coming soon
+        
     }
 
     public function enable()
@@ -32,7 +32,7 @@ class License extends SerialManager
 
     public function renew($date)
     {
-        //Coming soon
+        return $this->renewSN($this->serial,$date);
     }
 
     public function check()

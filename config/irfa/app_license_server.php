@@ -1,17 +1,54 @@
 <?php 
 	return [ 
 
-		'hashed'			=> false,//Hashed Serial number,
+	/*
+    |--------------------------------------------------------------------------
+    | License Route
+    |--------------------------------------------------------------------------
+    |
+    | Set route for checking serial number.
+    | https://yoursite.com/check/license
+    |
+    */
+	'license_route'		=> '/check/license',
 
-		'caching_license'	=> true,//Generate random alnum for upload filename,
+	/*
+    |--------------------------------------------------------------------------
+    | Route name
+    |--------------------------------------------------------------------------
+    |
+    | Set route name for checking serial number.
+    |
+    */
+	'route_name'		=> 'check_license',
 
-		'license_route'		=> "/check/license",
+	/*
+    |--------------------------------------------------------------------------
+    | Character Type
+    |--------------------------------------------------------------------------
+    |
+    | Set character type for serial number.
+    | alphanumeric	: AB12-CD34-XY09-ZY55
+    |
+    */
 
-		'route_name'		=> "check_license",
+	'char_type'			=> 'alphanumeric', //Type alphanumeric
 
-		'length'			=> 4, //length char per segment
+	/*
+    |--------------------------------------------------------------------------
+    | Serial Config
+    |--------------------------------------------------------------------------
+    |
+    | length	: length for one segment
+    | segment 	: segment amount for Serial number 
+    | striped 	: striped segment for serial
+    |
+    */
+		'length'			=> 4,//default : 4
 
-		'segment'			=> 4,
+		'segment'			=> 4,//default : 4
+
+		'striped'			=> true,//default : true
 
 
 

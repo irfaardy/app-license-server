@@ -29,7 +29,7 @@ class AppLicenseServerServiceProvider extends ServiceProvider
             __DIR__.'/../config/irfa/' => config_path('irfa')],'app-license-server');
         $this->publishes([
             __DIR__.'/../migrations/' => database_path('migrations'),
-        ], 'app-license');
+        ], 'app-license-server');
 
         
     }
