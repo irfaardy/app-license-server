@@ -142,7 +142,7 @@ ALS::serial($request->serial)->disabled();
 
 ​	
 
-<h2>How to Contributing?<h2>
+##How to Contributing?
 
 1. Fork it (<https://github.com/irfaardy/app-license-server/fork>)
 2. Commit your changes (`git commit -m 'New Feature'`)
