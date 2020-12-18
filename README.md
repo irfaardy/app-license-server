@@ -4,7 +4,7 @@
 
 [![GitHub license](https://img.shields.io/github/license/irfaardy/encrypt-file-laravel?style=flat-square)](https://github.com/irfaardy/encrypt-file-laravel/blob/master/LICENSE)  [![Support me](https://img.shields.io/badge/Support-Buy%20me%20a%20coffee-yellow.svg?style=flat-square)](https://www.buymeacoffee.com/OBaAofN) [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/S6S52P7SN)
 
-<p>Plugin ini berfungsi untuk membuat serial number yang akan diakses menggunakan plugin <a href="https://github.com/irfaardy/app-license-client">https://github.com/irfaardy/app-license-client</a><p>
+<p>This plugin functions to create a serial number that will be accessed using plugin <a href="https://github.com/irfaardy/app-license-client">Client side License</a><p>
 <h3>🛠️ Installation with Composer </h3>
 
 
