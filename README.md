@@ -52,51 +52,63 @@ php artisan migrate
 <h2>Inside Config File</h2>
 
 
-    <?php<?php 
-    	return [ 
-    
-    		'hashed'			=> false,//Hashed Serial number,
-    
-    		'caching_license'	=> true,//Generate random alnum for upload filename,
-    
-    		'license_route'		=> "/check/license",
-    
-    		'route_name'		=> "check_license",
-    
-    		'length'			=> 4, //length char per segment
-    
-    		'segment'			=> 4,
-    
-    
-    
-    ];
+```php
+<?php 
+	return [ 
 
+
+                'license_route'		=> '/check/license',
+
+
+                'route_name'		=> 'check_license',
+
+
+                'char_type'			=> 'alphanumeric', //Type alphanumeric,numeric,or alphabet
+
+                'length'			=> 4,//default : 4
+
+                'segment'			=> 4,//default : 4
+
+                'striped'			=> true,//default : true
+
+
+
+];
+
+    	
+    
+```
+
+
+  
 <h2>Register New Serial Number License</h2>
 
 
-    <?php
-    
-    namespace App\Http\Controllers;
-    
-    use ALS;
-    use Illuminate\Http\Request;
-    use App\Http\Controllers\Controller;
-    
-    class LicenseController extends Controller
+```php
+<?php
+
+namespace App\Http\Controllers;
+
+use ALS;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
+class LicenseController extends Controller
+{
+   
+    public function register(Request $request)
     {
-       
-        public function register(Request $request)
-        {
-          	return ALS::register(['name'=>"Lorem",
-          						'domain'=>"example.com",
-          						'phone_number'=>"08123123",
-          						'address'=>"Bandung,Indonesia"],now()->addDays(30));	
-        }
+      	return ALS::register(['name'=>"Lorem",
+      						'domain'=>"example.com",
+      						'phone_number'=>"08123123",
+      						'address'=>"Bandung,Indonesia"],now()->addDays(30));	
     }
+}
+```
 
 <h2> Check License</h2>
 
-```
+```php
 <?php
 
 namespace App\Http\Controllers;
@@ -115,4 +127,46 @@ class LicenseController extends Controller
 
 }
 ```
+
+<h2>Disabled Serial number</h2>
+
+```php
+ALS::serial($request->serial)->disabled();	
+```
+
+<h2>Enabled serial number</h2>
+
+```php
+ALS::serial($request->serial)->disabled();
+```
+
+​	
+
+<h2>How to Contributing?<h2>
+
+1. Fork it (<https://github.com/irfaardy/app-license-server/fork>)
+2. Commit your changes (`git commit -m 'New Feature'`)
+3. Push to the branch (`git push origin your-branch)
+4. Create a new Pull Request ` your-branch -> master`
+
+if you found bug or error, please post here https://github.com/irfaardy/app-license-server/issues so that they can be maintained together.
+
+
+
+***
+
+## Bagaimana cara berkontribusi?
+
+1. Lakukan fork di (<https://github.com/irfaardy/app-license-server/fork>)
+2. Commit perubahan yang anda lakukan (`git commit -m 'Fitur Baru'`)
+3. Push ke branch master (`git push origin branch-kamu)
+4. Buat Pull Request baru `branch-kamu -> master`
+
+---
+
+## Issue
+
+If you found issues or bug please create new issues here https://github.com/irfaardy/app-license-server/issues/new
+
+Jika anda menemukan bug atau error silahkan posting disini https://github.com/irfaardyapp-license-server/issues agar dapat diperbaiki bersama-sama.
 
