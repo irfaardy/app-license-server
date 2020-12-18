@@ -3,7 +3,7 @@
     "description": "\"License/Serial for web apllication\"",
     "type": "package",
     "license": "MIT",
-    "version": "v1.0",
+    "version": "v1.2",
     "keywords": ["laravel", "security", "serial", "decrypt", "secure","upload file"],
     "authors": [
         {
@@ -14,7 +14,8 @@
     "require": {
         "php": "^7.2",
         "ext-json": "*",
-        "laravel/framework": "^6.0|^7.0"
+        "laravel/framework": "^6.0|^7.0",
+        "irfa/php-sn-generator":"^1.0"
     },
     "autoload": {
             "psr-4": {

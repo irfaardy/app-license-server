@@ -29,6 +29,8 @@
     |
     | Set character type for serial number.
     | alphanumeric	: AB12-CD34-XY09-ZY55
+    | numeric       : 1234-4321-1357-2468
+    | alphabet      : ABCD-EFGH-IJKL-MNOP
     |
     */
 
