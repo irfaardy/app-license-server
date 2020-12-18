@@ -2,7 +2,9 @@
 
 # 🚀Lisensi aplikasi untuk server endpoint
 
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/irfaardy/app-license-server/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/irfaardy/app-license-server/?branch=master) [![Build Status](https://scrutinizer-ci.com/g/irfaardy/app-license-server/badges/build.png?b=master)](https://scrutinizer-ci.com/g/irfaardy/app-license-server/build-status/master) [![GitHub license](https://img.shields.io/github/license/irfaardy/encrypt-file-laravel?style=flat-square)](https://github.com/irfaardy/encrypt-file-laravel/blob/master/LICENSE)  [![Support me](https://img.shields.io/badge/Support-Buy%20me%20a%20coffee-yellow.svg?style=flat-square)](https://www.buymeacoffee.com/OBaAofN) [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/S6S52P7SN)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/irfaardy/app-license-server/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/irfaardy/app-license-server/?branch=master) [![Build Status](https://scrutinizer-ci.com/g/irfaardy/app-license-server/badges/build.png?b=master)](https://scrutinizer-ci.com/g/irfaardy/app-license-server/build-status/master) [![Latest Stable Version](https://poser.pugx.org/irfa/app-license-server/v)](//packagist.org/packages/irfa/app-license-server) [![GitHub license](https://img.shields.io/github/license/irfaardy/encrypt-file-laravel?style=flat-square)](https://github.com/irfaardy/encrypt-file-laravel/blob/master/LICENSE)  
+
+[![Support me](https://img.shields.io/badge/Support-Buy%20me%20a%20coffee-yellow.svg?style=flat-square)](https://www.buymeacoffee.com/OBaAofN) [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/S6S52P7SN)
 
 <p>This plugin functions to create a serial number that will be accessed using plugin <a href="https://github.com/irfaardy/app-license-client">Client side License</a><p>
 <h3>🛠️ Installation with Composer </h3>
