@@ -10,4 +10,4 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/check','Controller\AppLicenseController@check');
+Route::any('/check','Controller\AppLicenseController@check');

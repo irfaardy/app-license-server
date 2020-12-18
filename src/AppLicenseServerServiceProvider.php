@@ -24,7 +24,7 @@ class AppLicenseServerServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        \Route::middleware('api')->post(config('irfa.app_license_server.license_route'),'Irfa\AppLicenseServer\Controller\AppLicenseController@check')->name(config('irfa.app_license_server.route_name'));
+        \Route::middleware('api')->any(config('irfa.app_license_server.license_route'),'Irfa\AppLicenseServer\Controller\AppLicenseController@check')->name(config('irfa.app_license_server.route_name'));
         $this->publishes([
             __DIR__.'/../config/irfa/' => config_path('irfa')],'app-license-server');
         $this->publishes([

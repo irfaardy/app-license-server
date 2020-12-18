@@ -22,12 +22,12 @@ class License extends SerialManager
 
     public function disable()
     {
-        
+         return $this->disableSN($this->serial);
     }
 
     public function enable()
     {
-        //Coming soon
+        return $this->enableSN($this->serial);
     }
 
     public function renew($date)
@@ -42,6 +42,11 @@ class License extends SerialManager
             if($this->expired($this->serial))
             {
                 return (object)['active' => false,'message' => "Serial Number is Expired"];
+            }
+            
+            if($this->disabled($this->serial))
+            {
+                return (object)['active' => false,'message' => "Serial Number is Disabled"];
             }
 
              return (object)['active' => true,'message' => "Serial Number is valid"];

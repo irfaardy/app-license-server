@@ -33,6 +33,17 @@ class SerialManager extends SerialGenerator
 
             return true;
         }
+    } 
+
+    protected function disabled($sn)
+    {
+        $disabled = LicenseSerial::where('serial',$sn)->first();
+        if($disabled->status==1)
+        {
+            return true;
+        } 
+            return false;
+        
     }
 
     protected function exists($sn)
@@ -79,6 +90,11 @@ class SerialManager extends SerialGenerator
     protected function disableSN($sn)
     {
          return LicenseSerial::where('serial',$sn)->update(['status'=>1]);
+    }
+
+    protected function enableSN($sn)
+    {
+         return LicenseSerial::where('serial',$sn)->update(['status'=>0]);
     }
 
     protected function renewSN($sn,$days)
